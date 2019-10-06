@@ -1,0 +1,514 @@
+@import "normalize.css";
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+$width: 100%;
+
+$black: #131313;
+$brown: #e3b873;
+$white: #ffffff;
+
+$breakpoints: (
+  'mobile': ('(max-width: 375px)'),
+  'desktop': ('(max-width: 1440px)'),
+);
+
+.wrapper {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.header {
+  width: $width;
+  height: 83px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+  &--logo {
+    color: $brown;
+  }
+  &--navbar {
+    @media only screen and (max-width: 345px) {
+      display: none;
+    }
+  }
+  &--list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: $white;
+    & li {
+      margin: 0 10px;
+    }
+  }
+  &--contact {
+    display: flex;
+    flex-direction: row;
+  }
+  &--phone {
+    color: $brown;
+  }
+  &--request_form {
+    @media only screen and (max-width: 345px) {
+      display: none;
+    }
+  }
+}
+
+.main {
+  width: $width;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  background-color: $black;
+  &--instagram {
+    width: 5.69%;
+    height: 707px;
+    color: $brown;
+    border:1px solid red;
+    & p {
+      margin: 300px 0;
+      transform: rotate(90deg);
+    }
+  }
+  &--img {
+    width: 94.31%;
+    height: 707px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    & img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0.3;
+    }
+  }
+  &--scroll_down {
+    width: 17.15%;
+    height: 97px;
+    background-color: $black;
+    border: 1px solid red;
+    overflow: visible;
+    position: absolute;
+    top: 92%;
+    color: $white;
+  }
+}
+
+.completed {
+  width: $width;
+  height: 800px;
+  box-sizing: border-box;
+  display: flex;
+  background-color: $black;
+  border: 1px solid red;
+  &--description {
+    width: 40%;
+    height: 483px;
+    border: 1px solid red;
+  }
+  &--pictures {
+    width: 60%;
+    height: 520px;
+    border: 1px solid red;
+  }
+}
+
+.control {
+  width: $width;
+  height: 400px;
+  margin-top: -250px;
+  box-sizing: border-box;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  &--text {
+    width: 196px;
+    height: 66.79px;
+    
+    flex-wrap: wrap;
+    color: $white;
+  }
+}
+
+.broadcast {
+  width: $width;
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $white;
+  border: 1px solid red;
+  &--text {
+    width: 47.3%;
+  }
+}
+
+.types {
+  width: $width;
+  height: 750px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+  border: 1px solid red;
+  &--examples {
+    width: 85.83%;
+    display: flex;
+    flex-direction: row;
+  }
+  &--example {
+    margin: 0 15px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  &--text {
+    width: 330px;
+    height: 286px;
+    margin-top: -130px;
+    margin-left: 30px;
+    background-color: $white;
+    color: $black;
+    overflow: visible;
+  }
+  &--price {
+    width: 228px;
+    height: 54px;
+    margin-top: -20px;
+    margin-left: 30px;
+    background-color: $brown;
+    color: $white;
+    overflow: visible;
+  }
+}
+
+.measure {
+  width: $width;
+  height: 750px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  border: 1px solid red;
+  &--scheme {
+    width: 63.29%;
+    height: 692px;
+    background-image: url("../images/image\ 6.1.png");
+    background-repeat: no-repeat;
+  }
+  &--request {
+    width: 36.81%;
+    & form {
+      width: 506px;
+      height: 509px;
+      background-color: $black;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    &--text {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.styles {
+  width: $width;
+  height: 864px;
+  box-sizing: border-box;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-image: url("../images/group-22.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &--list {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    & .heading {
+      color: $brown;
+    }
+    & ul {
+      color: $white;
+      list-style-type: none;
+      line-height: 3;
+    }
+  }
+  &--images {
+    width: 60%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+    & img:first-child {
+      width: 353.81px;
+      height: 556.86px;
+      margin-top: -40px;
+    }
+    & img:nth-child(2) {
+      width: 353.81px;
+      height: 349.47px;
+      margin-top: 30px;
+      margin-bottom: -40px;
+    }
+    & img:last-child {
+      width: 353.81px;
+      height: 625.23px;
+      margin: 0 60px 30px 0;
+    }
+  }
+}
+
+.design_project {
+  width: $width;
+  height: 500px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+  border: 1px solid red;
+  &--examples {
+    width: 85.83%;
+    display: flex;
+    flex-direction: row;
+    & img {
+      height: 421px;
+    }
+  }
+  &--example {
+    margin: 0 15px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  &--text {
+    width: 330px;
+    margin-top: -130px;
+    margin-left: 30px;
+    background-color: $white;
+    color: $black;
+    overflow: visible;
+  }
+  &--price {
+    width: 228px;
+    height: 54px;
+    margin-top: -20px;
+    margin-left: 30px;
+    background-color: $brown;
+    color: $white;
+    overflow: visible;
+  }
+}
+
+.process {
+  width: $width;
+  height: 900px;
+  box-sizing: border-box;
+  padding-top: 282px;
+  display: flex;
+  background-color: $black;
+  border: 1px solid red;
+  &--description {
+    width: 40%;
+    border: 1px solid red;
+    color: $white;
+    & h1, & h3 {
+      color: $brown;
+    }
+  }
+  &--steps {
+    width: 60%;
+    border: 1px solid red;
+  }
+  &--list {
+    width: 765px;
+    height: 180px;
+    color: #5a5a5a;
+    display: flex;
+    flex-flow: row wrap;
+    & div {
+      width: 30%;
+    }
+    & div:first-child{
+      color: $white;
+    }
+  }
+  &--img {
+    width: 765px;
+    height: 376.64px;
+  }
+}
+
+.team {
+  width: $width;
+  height: 500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $black;
+  border: 1px solid red;
+  &--members {
+    width: 85.83%;
+    display: flex;
+    flex-direction: row;
+    & img {
+      height: 421px;
+    }
+  }
+  &--member {
+    margin: 0 15px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    & img {
+      max-width: 272.24px;
+      max-height: 380px;
+    }
+  }
+  &--signature {
+    width: 233px;
+    height: 137px;
+    margin-top: -130px;
+    margin-left: 30px;
+    background-color: $white;
+    color: $black;
+    overflow: visible;
+  }
+  &--experience {
+    width: 233px;
+    height: 44px;
+    margin-top: -20px;
+    margin-left: 30px;
+    background-color: $brown;
+    color: $white;
+    overflow: visible;
+  }
+  &--text {
+    margin-top: 50px;
+  }
+}
+
+.clients {
+  width: $width;
+  height: 1200px;
+  padding-top: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+  border: 1px solid red;
+  &--cards {
+    width: 85.83%;
+    display: flex;
+    flex-direction: row;
+  }
+  &--card {
+    margin: 0 15px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  &--review {
+    width: 233px;
+    background-color: $white;
+    color: $black;
+  }
+  &--experience {
+    width: 233px;
+    background-color: $brown;
+    color: $white;
+  }
+}
+
+.questions {
+  width: 100%;
+  height: 0;
+  margin-top: -50px;
+  box-sizing: border-box;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  & form {
+    width: 61.32%;
+    height: 445.32px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $black;
+    color: $white;
+  }
+}
+
+.contact {
+  width: $width;
+  height: 900px;
+  box-sizing: border-box;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/image\ 7.2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &_inside {
+    
+  }
+  &--address {
+    color: $brown;
+  }
+  &--map {
+    width: 64.24%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      margin: 20px 0;
+    }
+  }
+}
+
+.footer {
+  width: $width;
+  height: 133px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+}
