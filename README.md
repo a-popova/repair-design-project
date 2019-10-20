@@ -1,6 +1,6 @@
 # Repair-design-project page
 
-Install all packages:
+Install all dependencies:
 ```
 $ npm install
 ```
