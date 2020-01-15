@@ -11,4 +11,3 @@ $ npm run build
 ```
 
 Done! Open index.html in browser.
-
